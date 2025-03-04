@@ -20,9 +20,11 @@ Public Class WinFormEx
 
     Sub SetCase()
         If UpperRadioButton.Checked = True Then
-            Me.Text = UCase(FirstTextBox.Text & " " & LastNameTextBox.Text)
+            FirstTextBox.Text = UCase(FirstTextBox.Text)
+            LastNameTextBox.Text = UCase(LastNameTextBox.Text)
         ElseIf LowerRadioButton.Checked = True Then
-            Me.Text = LCase(FirstTextBox.Text & " " & LastNameTextBox.Text)
+            FirstTextBox.Text = LCase(FirstTextBox.Text)
+            LastNameTextBox.Text = LCase(LastNameTextBox.Text)
         Else
             MsgBox($"Oh Golly Gee Willikers...Nothing is selected")
         End If
