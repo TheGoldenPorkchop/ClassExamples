@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class WinFormEx
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class WinFormEx
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
@@ -32,6 +32,14 @@ Partial Class WinFormEx
         Me.ThirdNameLabel = New System.Windows.Forms.Label()
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
         Me.AgeLabel = New System.Windows.Forms.Label()
+        Me.UpperRadioButton = New System.Windows.Forms.RadioButton()
+        Me.LowerRadioButton = New System.Windows.Forms.RadioButton()
+        Me.FirstLastRadioButton = New System.Windows.Forms.RadioButton()
+        Me.LastFirstRadioButton = New System.Windows.Forms.RadioButton()
+        Me.CaseGroupBox = New System.Windows.Forms.GroupBox()
+        Me.NameOrderGroupBox = New System.Windows.Forms.GroupBox()
+        Me.CaseGroupBox.SuspendLayout()
+        Me.NameOrderGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'ExitButton
@@ -116,11 +124,79 @@ Partial Class WinFormEx
         Me.AgeLabel.TabIndex = 8
         Me.AgeLabel.Text = "Age"
         '
+        'UpperRadioButton
+        '
+        Me.UpperRadioButton.AutoSize = True
+        Me.UpperRadioButton.Location = New System.Drawing.Point(6, 21)
+        Me.UpperRadioButton.Name = "UpperRadioButton"
+        Me.UpperRadioButton.Size = New System.Drawing.Size(101, 20)
+        Me.UpperRadioButton.TabIndex = 9
+        Me.UpperRadioButton.TabStop = True
+        Me.UpperRadioButton.Text = "Upper Case"
+        Me.UpperRadioButton.UseVisualStyleBackColor = True
+        '
+        'LowerRadioButton
+        '
+        Me.LowerRadioButton.AutoSize = True
+        Me.LowerRadioButton.Location = New System.Drawing.Point(8, 47)
+        Me.LowerRadioButton.Name = "LowerRadioButton"
+        Me.LowerRadioButton.Size = New System.Drawing.Size(99, 20)
+        Me.LowerRadioButton.TabIndex = 10
+        Me.LowerRadioButton.TabStop = True
+        Me.LowerRadioButton.Text = "Lower Case"
+        Me.LowerRadioButton.UseVisualStyleBackColor = True
+        '
+        'FirstLastRadioButton
+        '
+        Me.FirstLastRadioButton.AutoSize = True
+        Me.FirstLastRadioButton.Location = New System.Drawing.Point(8, 21)
+        Me.FirstLastRadioButton.Name = "FirstLastRadioButton"
+        Me.FirstLastRadioButton.Size = New System.Drawing.Size(81, 20)
+        Me.FirstLastRadioButton.TabIndex = 11
+        Me.FirstLastRadioButton.TabStop = True
+        Me.FirstLastRadioButton.Text = "First Last"
+        Me.FirstLastRadioButton.UseVisualStyleBackColor = True
+        '
+        'LastFirstRadioButton
+        '
+        Me.LastFirstRadioButton.AutoSize = True
+        Me.LastFirstRadioButton.Location = New System.Drawing.Point(8, 51)
+        Me.LastFirstRadioButton.Name = "LastFirstRadioButton"
+        Me.LastFirstRadioButton.Size = New System.Drawing.Size(84, 20)
+        Me.LastFirstRadioButton.TabIndex = 12
+        Me.LastFirstRadioButton.TabStop = True
+        Me.LastFirstRadioButton.Text = "Last, First"
+        Me.LastFirstRadioButton.UseVisualStyleBackColor = True
+        '
+        'CaseGroupBox
+        '
+        Me.CaseGroupBox.Controls.Add(Me.UpperRadioButton)
+        Me.CaseGroupBox.Controls.Add(Me.LowerRadioButton)
+        Me.CaseGroupBox.Location = New System.Drawing.Point(106, 153)
+        Me.CaseGroupBox.Name = "CaseGroupBox"
+        Me.CaseGroupBox.Size = New System.Drawing.Size(117, 77)
+        Me.CaseGroupBox.TabIndex = 13
+        Me.CaseGroupBox.TabStop = False
+        Me.CaseGroupBox.Text = "Casing"
+        '
+        'NameOrderGroupBox
+        '
+        Me.NameOrderGroupBox.Controls.Add(Me.FirstLastRadioButton)
+        Me.NameOrderGroupBox.Controls.Add(Me.LastFirstRadioButton)
+        Me.NameOrderGroupBox.Location = New System.Drawing.Point(229, 153)
+        Me.NameOrderGroupBox.Name = "NameOrderGroupBox"
+        Me.NameOrderGroupBox.Size = New System.Drawing.Size(126, 77)
+        Me.NameOrderGroupBox.TabIndex = 14
+        Me.NameOrderGroupBox.TabStop = False
+        Me.NameOrderGroupBox.Text = "Name Order"
+        '
         'WinFormEx
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.NameOrderGroupBox)
+        Me.Controls.Add(Me.CaseGroupBox)
         Me.Controls.Add(Me.AgeTextBox)
         Me.Controls.Add(Me.AgeLabel)
         Me.Controls.Add(Me.LastNameTextBox)
@@ -133,6 +209,10 @@ Partial Class WinFormEx
         Me.Controls.Add(Me.ExitButton)
         Me.Name = "WinFormEx"
         Me.Text = "Window Forms Example"
+        Me.CaseGroupBox.ResumeLayout(False)
+        Me.CaseGroupBox.PerformLayout()
+        Me.NameOrderGroupBox.ResumeLayout(False)
+        Me.NameOrderGroupBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +228,10 @@ Partial Class WinFormEx
     Friend WithEvents ThirdNameLabel As Label
     Friend WithEvents AgeTextBox As TextBox
     Friend WithEvents AgeLabel As Label
+    Friend WithEvents UpperRadioButton As RadioButton
+    Friend WithEvents LowerRadioButton As RadioButton
+    Friend WithEvents FirstLastRadioButton As RadioButton
+    Friend WithEvents LastFirstRadioButton As RadioButton
+    Friend WithEvents CaseGroupBox As GroupBox
+    Friend WithEvents NameOrderGroupBox As GroupBox
 End Class
