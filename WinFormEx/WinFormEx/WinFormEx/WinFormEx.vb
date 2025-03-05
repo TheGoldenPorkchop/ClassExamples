@@ -16,6 +16,11 @@ Public Class WinFormEx
         AgeTextBox.Text = ""
         UpperRadioButton.Checked = True
         FirstLastRadioButton.Checked = True
+        ReverseCheckBox.Checked = False
+        WhiteSpaceCheckBox.Checked = False
+        RandomCheckBox.Checked = False
+        FirstTextBox.Focus()
+
     End Sub
 
     Sub SetCase()
@@ -31,6 +36,7 @@ Public Class WinFormEx
 
     End Sub
 
+
     Sub SetFormat()
         If FirstLastRadioButton.Checked = True Then
             Me.Text = FirstTextBox.Text & " " & LastNameTextBox.Text
@@ -42,6 +48,62 @@ Public Class WinFormEx
 
     End Sub
 
+    Sub ReverseString()
+        If ReverseCheckBox.Checked Then
+            Me.Text = StrReverse(Me.Text)
+        End If
+    End Sub
+
+    Sub RemoveWhiteSpace()
+        If WhiteSpaceCheckBox.Checked Then
+            Me.Text = Replace(Me.Text, " ", "")
+        End If
+    End Sub
+
+    Sub RandomString()
+        'code goes here eventually
+    End Sub
+
+    Function UserInputIsValid() As Boolean
+        Dim valid As Boolean
+        Dim message As String
+        'Dim age As Integer
+        'age = CInt(AgeTextBox.Text)
+
+        If IsNumeric(AgeTextBox.Text) = False Then
+            valid = False
+            message &= "The Age Input is not a number" & vbNewLine
+        End If
+        If AgeTextBox.Text = "" Then
+            valid = False
+            message &= "Age is required" & vbNewLine
+            AgeTextBox.Focus()
+        End If
+        If LastNameTextBox.Text = "" Then
+            valid = False
+            message &= "Last Name is required" & vbNewLine
+            LastNameTextBox.Focus()
+        End If
+        If FirstTextBox.Text = "" Then
+            valid = False
+            message &= "First Name is required" & vbNewLine
+            FirstTextBox.Focus()
+        End If
+
+        'If age < 18 Then
+        'valid = False
+        'MsgBox($"You aren't old enough")
+        'FirstTextBox.Focus()
+        'End If
+
+
+        If Not valid Then
+            MsgBox(message, MsgBoxStyle.Critical, "Empty Fields")
+        End If
+        Return valid
+    End Function
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub
@@ -49,16 +111,20 @@ Public Class WinFormEx
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
         'Me.Text = "Forms Are Cool Beans"
 
-
-        'Me.Text = StrReverse(Me.Text)
-        SetCase()
-        SetFormat()
-        SetDefaults()
+        If UserInputIsValid() Then
+            SetCase()
+            SetFormat()
+            ReverseString()
+            RemoveWhiteSpace()
+            SetDefaults()
+        End If
     End Sub
 
     Private Sub WinFormEx_Load(sender As Object, e As EventArgs) Handles Me.Load
         SetDefaults()
     End Sub
+
+
 
     'code goes here
 End Class

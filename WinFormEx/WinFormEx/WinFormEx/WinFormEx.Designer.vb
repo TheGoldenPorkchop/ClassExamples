@@ -38,6 +38,9 @@ Partial Class WinFormEx
         Me.LastFirstRadioButton = New System.Windows.Forms.RadioButton()
         Me.CaseGroupBox = New System.Windows.Forms.GroupBox()
         Me.NameOrderGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ReverseCheckBox = New System.Windows.Forms.CheckBox()
+        Me.WhiteSpaceCheckBox = New System.Windows.Forms.CheckBox()
+        Me.RandomCheckBox = New System.Windows.Forms.CheckBox()
         Me.CaseGroupBox.SuspendLayout()
         Me.NameOrderGroupBox.SuspendLayout()
         Me.SuspendLayout()
@@ -190,11 +193,44 @@ Partial Class WinFormEx
         Me.NameOrderGroupBox.TabStop = False
         Me.NameOrderGroupBox.Text = "Name Order"
         '
+        'ReverseCheckBox
+        '
+        Me.ReverseCheckBox.AutoSize = True
+        Me.ReverseCheckBox.Location = New System.Drawing.Point(106, 236)
+        Me.ReverseCheckBox.Name = "ReverseCheckBox"
+        Me.ReverseCheckBox.Size = New System.Drawing.Size(81, 20)
+        Me.ReverseCheckBox.TabIndex = 15
+        Me.ReverseCheckBox.Text = "Reverse"
+        Me.ReverseCheckBox.UseVisualStyleBackColor = True
+        '
+        'WhiteSpaceCheckBox
+        '
+        Me.WhiteSpaceCheckBox.AutoSize = True
+        Me.WhiteSpaceCheckBox.Location = New System.Drawing.Point(106, 262)
+        Me.WhiteSpaceCheckBox.Name = "WhiteSpaceCheckBox"
+        Me.WhiteSpaceCheckBox.Size = New System.Drawing.Size(106, 20)
+        Me.WhiteSpaceCheckBox.TabIndex = 16
+        Me.WhiteSpaceCheckBox.Text = "White Space"
+        Me.WhiteSpaceCheckBox.UseVisualStyleBackColor = True
+        '
+        'RandomCheckBox
+        '
+        Me.RandomCheckBox.AutoSize = True
+        Me.RandomCheckBox.Location = New System.Drawing.Point(106, 288)
+        Me.RandomCheckBox.Name = "RandomCheckBox"
+        Me.RandomCheckBox.Size = New System.Drawing.Size(81, 20)
+        Me.RandomCheckBox.TabIndex = 17
+        Me.RandomCheckBox.Text = "Random"
+        Me.RandomCheckBox.UseVisualStyleBackColor = True
+        '
         'WinFormEx
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.RandomCheckBox)
+        Me.Controls.Add(Me.WhiteSpaceCheckBox)
+        Me.Controls.Add(Me.ReverseCheckBox)
         Me.Controls.Add(Me.NameOrderGroupBox)
         Me.Controls.Add(Me.CaseGroupBox)
         Me.Controls.Add(Me.AgeTextBox)
@@ -234,4 +270,7 @@ Partial Class WinFormEx
     Friend WithEvents LastFirstRadioButton As RadioButton
     Friend WithEvents CaseGroupBox As GroupBox
     Friend WithEvents NameOrderGroupBox As GroupBox
+    Friend WithEvents ReverseCheckBox As CheckBox
+    Friend WithEvents WhiteSpaceCheckBox As CheckBox
+    Friend WithEvents RandomCheckBox As CheckBox
 End Class
