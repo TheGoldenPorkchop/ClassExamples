@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GraphicEx", "GraphicEx\GraphicEx.vbproj", "{A7E3E9FE-81D5-4340-9985-6F1839067414}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GraphicEx", "GraphicEx\GraphicEx.vbproj", "{F6898D85-30C6-4108-BC59-C0CE8C4B9D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A7E3E9FE-81D5-4340-9985-6F1839067414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7E3E9FE-81D5-4340-9985-6F1839067414}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7E3E9FE-81D5-4340-9985-6F1839067414}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7E3E9FE-81D5-4340-9985-6F1839067414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6898D85-30C6-4108-BC59-C0CE8C4B9D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6898D85-30C6-4108-BC59-C0CE8C4B9D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6898D85-30C6-4108-BC59-C0CE8C4B9D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6898D85-30C6-4108-BC59-C0CE8C4B9D71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
